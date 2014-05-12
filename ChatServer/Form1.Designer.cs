@@ -35,9 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.hostNameLabel = new System.Windows.Forms.Label();
+            this.hostIPLabel = new System.Windows.Forms.Label();
+            this.hostPortLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -103,32 +103,29 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Host Port";
             // 
-            // label4
+            // hostNameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 219);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            this.hostNameLabel.AutoSize = true;
+            this.hostNameLabel.Location = new System.Drawing.Point(85, 219);
+            this.hostNameLabel.Name = "hostNameLabel";
+            this.hostNameLabel.Size = new System.Drawing.Size(0, 13);
+            this.hostNameLabel.TabIndex = 6;
             // 
-            // label5
+            // hostIPLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "label5";
+            this.hostIPLabel.AutoSize = true;
+            this.hostIPLabel.Location = new System.Drawing.Point(85, 248);
+            this.hostIPLabel.Name = "hostIPLabel";
+            this.hostIPLabel.Size = new System.Drawing.Size(0, 13);
+            this.hostIPLabel.TabIndex = 7;
             // 
-            // label6
+            // hostPortLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(85, 277);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "label6";
+            this.hostPortLabel.AutoSize = true;
+            this.hostPortLabel.Location = new System.Drawing.Point(85, 277);
+            this.hostPortLabel.Name = "hostPortLabel";
+            this.hostPortLabel.Size = new System.Drawing.Size(0, 13);
+            this.hostPortLabel.TabIndex = 8;
             // 
             // label7
             // 
@@ -180,9 +177,9 @@
             this.ClientSize = new System.Drawing.Size(505, 305);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.hostPortLabel);
+            this.Controls.Add(this.hostIPLabel);
+            this.Controls.Add(this.hostNameLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -206,9 +203,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label hostNameLabel;
+        private System.Windows.Forms.Label hostIPLabel;
+        private System.Windows.Forms.Label hostPortLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
