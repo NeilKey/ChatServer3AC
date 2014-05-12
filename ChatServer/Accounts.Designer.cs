@@ -128,7 +128,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Accounts";
+            this.ShowInTaskbar = false;
             this.Text = "Accounts";
             this.rightClickMenu.ResumeLayout(false);
             this.ResumeLayout(false);
