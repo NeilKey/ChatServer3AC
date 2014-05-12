@@ -13,13 +13,13 @@ using System.Net.Sockets;
 
 namespace ChatServer
 {
-    public partial class Form1 : Form
+    public partial class ChatServerForm : Form
     {
         private String hostname;
         private String hostIP;
         private int port = Properties.Settings.Default.port;
 
-        public Form1()
+        public ChatServerForm()
         {
             InitializeComponent();
             this.hostname = System.Environment.MachineName;
