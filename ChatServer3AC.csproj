@@ -49,7 +49,6 @@
     <Compile Include="ChatServerForm.Designer.cs">
       <DependentUpon>ChatServerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
