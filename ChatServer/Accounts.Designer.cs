@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.accountListView = new System.Windows.Forms.ListView();
             this.Nickname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Password = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,20 +43,21 @@
             this.rightClickMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // accountListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.accountListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nickname,
             this.Username,
             this.Password,
             this.Enable});
-            this.listView1.Location = new System.Drawing.Point(12, 27);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(484, 223);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listClick);
+            this.accountListView.FullRowSelect = true;
+            this.accountListView.Location = new System.Drawing.Point(12, 27);
+            this.accountListView.Name = "accountListView";
+            this.accountListView.Size = new System.Drawing.Size(484, 223);
+            this.accountListView.TabIndex = 0;
+            this.accountListView.UseCompatibleStateImageBehavior = false;
+            this.accountListView.View = System.Windows.Forms.View.Details;
+            this.accountListView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listClick);
             // 
             // Nickname
             // 
@@ -126,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 262);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.accountListView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -141,7 +142,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView accountListView;
         private System.Windows.Forms.ColumnHeader Nickname;
         private System.Windows.Forms.ColumnHeader Username;
         private System.Windows.Forms.ColumnHeader Password;
