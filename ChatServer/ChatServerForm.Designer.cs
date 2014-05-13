@@ -81,18 +81,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Host Name";
+            this.label1.Text = "Host Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Host IP";
+            this.label2.Text = "Host IP:";
             // 
             // hostPortClick
             // 
