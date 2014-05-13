@@ -77,6 +77,12 @@
     <Compile Include="ChatServerForm.Designer.cs">
       <DependentUpon>ChatServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HostPortForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostPortForm.Designer.cs">
+      <DependentUpon>HostPortForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Accounts.resx">

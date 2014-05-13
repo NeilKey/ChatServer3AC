@@ -10,7 +10,7 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=|DataDirectory|\Accounts.sdf</Value>
     </Setting>
-    <Setting Name="port" Type="System.Int32" Scope="Application">
+    <Setting Name="serverPort" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">6000</Value>
     </Setting>
   </Settings>

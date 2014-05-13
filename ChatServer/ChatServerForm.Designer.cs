@@ -34,7 +34,7 @@
             this.accounts = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.hostPortClick = new System.Windows.Forms.Label();
             this.hostNameLabel = new System.Windows.Forms.Label();
             this.hostIPLabel = new System.Windows.Forms.Label();
             this.hostPortLabel = new System.Windows.Forms.Label();
@@ -94,37 +94,42 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Host IP";
             // 
-            // label3
+            // hostPortClick
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 277);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Host Port";
+            this.hostPortClick.AutoSize = true;
+            this.hostPortClick.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hostPortClick.Location = new System.Drawing.Point(19, 277);
+            this.hostPortClick.Name = "hostPortClick";
+            this.hostPortClick.Size = new System.Drawing.Size(54, 13);
+            this.hostPortClick.TabIndex = 5;
+            this.hostPortClick.Text = "Host Port:";
+            this.hostPortClick.Click += new System.EventHandler(this.OnHostPortChange);
             // 
             // hostNameLabel
             // 
             this.hostNameLabel.AutoSize = true;
             this.hostNameLabel.Location = new System.Drawing.Point(85, 219);
+            this.hostNameLabel.MinimumSize = new System.Drawing.Size(250, 0);
             this.hostNameLabel.Name = "hostNameLabel";
-            this.hostNameLabel.Size = new System.Drawing.Size(0, 13);
+            this.hostNameLabel.Size = new System.Drawing.Size(250, 13);
             this.hostNameLabel.TabIndex = 6;
             // 
             // hostIPLabel
             // 
             this.hostIPLabel.AutoSize = true;
             this.hostIPLabel.Location = new System.Drawing.Point(85, 248);
+            this.hostIPLabel.MinimumSize = new System.Drawing.Size(250, 0);
             this.hostIPLabel.Name = "hostIPLabel";
-            this.hostIPLabel.Size = new System.Drawing.Size(0, 13);
+            this.hostIPLabel.Size = new System.Drawing.Size(250, 13);
             this.hostIPLabel.TabIndex = 7;
             // 
             // hostPortLabel
             // 
             this.hostPortLabel.AutoSize = true;
             this.hostPortLabel.Location = new System.Drawing.Point(85, 277);
+            this.hostPortLabel.MinimumSize = new System.Drawing.Size(250, 0);
             this.hostPortLabel.Name = "hostPortLabel";
-            this.hostPortLabel.Size = new System.Drawing.Size(0, 13);
+            this.hostPortLabel.Size = new System.Drawing.Size(250, 13);
             this.hostPortLabel.TabIndex = 8;
             // 
             // label7
@@ -170,7 +175,7 @@
             this.columnHeader4.Text = "Connect time";
             this.columnHeader4.Width = 136;
             // 
-            // Form1
+            // ChatServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +185,7 @@
             this.Controls.Add(this.hostPortLabel);
             this.Controls.Add(this.hostIPLabel);
             this.Controls.Add(this.hostNameLabel);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.hostPortClick);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.accounts);
@@ -188,7 +193,7 @@
             this.Controls.Add(this.start);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "ChatServerForm";
             this.Text = "Chat Server";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,7 +207,7 @@
         private System.Windows.Forms.Button accounts;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label hostPortClick;
         private System.Windows.Forms.Label hostNameLabel;
         private System.Windows.Forms.Label hostIPLabel;
         private System.Windows.Forms.Label hostPortLabel;

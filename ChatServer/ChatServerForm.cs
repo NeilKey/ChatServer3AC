@@ -2,6 +2,7 @@
 using System.Net;
 using System.Windows.Forms;
 using System.Net.Sockets;
+using ChatServer.Properties;
 
 namespace ChatServer
 {
@@ -9,7 +10,6 @@ namespace ChatServer
     {
         private String hostname;
         private String hostIP;
-        private int port = Properties.Settings.Default.port;
 
         public ChatServerForm()
         {
@@ -18,7 +18,7 @@ namespace ChatServer
             this.hostIP = LocalIPAddress();
             this.hostNameLabel.Text = hostname;
             this.hostIPLabel.Text = hostIP;
-            this.hostPortLabel.Text = port.ToString();
+            this.hostPortLabel.Text = Settings.Default.serverPort.ToString();
         }
 
         public string LocalIPAddress()
@@ -59,6 +59,14 @@ namespace ChatServer
             Accounts f_accounts = new Accounts();
             f_accounts.Show();
 
+        }
+
+        private void OnHostPortChange(object sender, EventArgs e)
+        {
+            HostPortForm dlg = new HostPortForm(Settings.Default.serverPort);
+            if (dlg.ShowDialog() != DialogResult.OK) return;
+
+            this.hostPortLabel.Text = Settings.Default.serverPort.ToString();
         }
     }
 }
