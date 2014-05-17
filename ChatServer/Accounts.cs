@@ -66,5 +66,22 @@ namespace ChatServer
                 }
             }
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            PopulateAccountList();
+        }
+
+        private void enableButton_Click(object sender, EventArgs e)
+        {
+            var selectedItems = accountListView.SelectedItems;
+            foreach (ListViewItem selectedItem in selectedItems)
+            {
+                MessageBox.Show(selectedItem.SubItems[0].Text);
+                // query al database, where username = selectedItem.SubItems[0].Text --> enabled = false
+                // cambiare stato su rightclickmenu
+                PopulateAccountList();
+            }   
+        }
     }
 }

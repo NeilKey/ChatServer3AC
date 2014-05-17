@@ -103,6 +103,7 @@
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(211, 22);
             this.refreshButton.Text = "Refresh";
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -114,6 +115,7 @@
             this.enableButton.Name = "enableButton";
             this.enableButton.Size = new System.Drawing.Size(211, 22);
             this.enableButton.Text = "Enable seleced accounts";
+            this.enableButton.Click += new System.EventHandler(this.enableButton_Click);
             // 
             // deletedButton
             // 
