@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ChatProtocol.cs" />
     <Compile Include="ChatServerForm.cs">
       <SubType>Form</SubType>
     </Compile>
