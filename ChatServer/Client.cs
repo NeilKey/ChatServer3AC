@@ -125,8 +125,8 @@ namespace ChatServer
                 // Complete sending the data to the remote device.
                 int bytesSent = handler.EndSend(ar);
 
-                handler.Shutdown(SocketShutdown.Both);
-                handler.Close();
+                //handler.Shutdown(SocketShutdown.Both);
+                //handler.Close();
 
             }
             catch (Exception e)
