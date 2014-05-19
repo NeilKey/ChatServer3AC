@@ -18,6 +18,7 @@ namespace ChatServer
         public static int BufferSize = 1024;
         // Receive buffer.
         public byte[] buffer;
+        public String nickname;
         // Classe che gestisce il protocollo
         ChatProtocol protocol;
 
@@ -108,7 +109,7 @@ namespace ChatServer
         public void Send(String data)
         {
             // Convert the string data to byte data using ASCII encoding.
-            byte[] byteData = Encoding.UTF8.GetBytes(data);
+            byte[] byteData = Encoding.Unicode.GetBytes(data);
 
             // Begin sending the data to the remote device.
             socket.BeginSend(byteData, 0, byteData.Length, 0, new AsyncCallback(SendCallback), socket);
@@ -132,6 +133,26 @@ namespace ChatServer
             {
                 MessageBox.Show(e.ToString());
             }
+        }
+
+        public void Close() 
+        {
+            csf.deleteClient(this);
+        }
+
+        public void NotifyNewOnline(String nickname)
+        {
+            csf.NotifyNewOffline(this, nickname);
+        }
+
+        public void NotifyNewOffline(String nickname)
+        {
+            csf.NotifyNewOnline(this, nickname);
+        }
+
+        public void SendMessages(String from, String[] to, String message)
+        {
+            csf.SendMessages(from, to, message);
         }
     }
 }

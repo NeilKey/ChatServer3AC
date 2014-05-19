@@ -79,6 +79,7 @@
       <DependentUpon>ChatServerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Client.cs" />
+    <Compile Include="DbManagement.cs" />
     <Compile Include="HostPortForm.cs">
       <SubType>Form</SubType>
     </Compile>

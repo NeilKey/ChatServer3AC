@@ -121,5 +121,38 @@ namespace ChatServer
         public void deleteClient(Client c) {
             clients.Remove(c);
         }
+
+        public void NotifyNewOnline(Client cOnline, String nickname) 
+        {
+            foreach (Client client in clients)
+            {
+                if(client != cOnline)
+                    client.Send("NewUser:" + nickname);
+            }
+        }
+
+        public void NotifyNewOffline(Client cOffline, String nickname)
+        {
+            deleteClient(cOffline);
+            foreach (Client client in clients)
+            {
+                    client.Send("UserLeave:" + nickname);
+            }
+        }
+
+        public void SendMessages(String from, String[] to, String message)
+        {
+            foreach (Client c in clients)
+            {
+                foreach (String nickname in to)
+                {
+                    if (nickname == c.nickname)
+                    {
+                        c.Send(String.Format("Msg:{0}:{1}", from, message));
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

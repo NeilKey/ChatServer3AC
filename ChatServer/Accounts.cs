@@ -2,6 +2,7 @@
 using System.Data.SqlServerCe;
 using System.Windows.Forms;
 using ChatServer.Properties;
+using System.Collections.Generic;
 
 namespace ChatServer
 {
@@ -14,45 +15,20 @@ namespace ChatServer
             PopulateAccountList();
         }
 
+        private DbManagement db = new DbManagement();
+
         private void PopulateAccountList()
         {
             accountListView.Items.Clear();
 
-            SqlCeConnection conn = null;
-            SqlCeCommand cmd = null;
+            List<String[]> accounts = db.getAccounts();
 
-            try
-            {
-                conn = new SqlCeConnection(Settings.Default.AccountsConnectionString);
-                conn.Open();
-
-                cmd = new SqlCeCommand("SELECT * FROM [Users]", conn);
-
-                SqlCeDataReader reader = cmd.ExecuteReader();
-                cmd.Dispose();
-
-                // Per ragioni di performances, utilizzare GetOrdinal() all'esterno del loop while(reader.Read())
-                int idUsername = reader.GetOrdinal("Username");
-                int idPassword = reader.GetOrdinal("Password");
-                int idNickname = reader.GetOrdinal("Nickname");
-                int idEnabled = reader.GetOrdinal("Enabled");
-
-                while (reader.Read())
-                {
-                    accountListView.Items.Add(reader.GetString(idNickname)).SubItems.AddRange(new string[] {
-                        reader.GetString(idUsername),
-                        reader.GetString(idPassword),
-                        (reader.GetBoolean(idEnabled)) ? "Yes" : "No" });
-                }
-
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                if (cmd != null) cmd.Dispose();
-                if (conn != null) conn.Close();
-
-                MessageBox.Show(e.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            foreach (String[] account in accounts) {
+                accountListView.Items.Add(account[0]).SubItems.AddRange(new string[] {
+                    account[1],
+                    account[2],
+                    account[3]
+                });
             }
         }
 
